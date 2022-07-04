@@ -1,0 +1,17 @@
+{
+    "name": "WQher2xy",
+    "description": "deploy xray to heroku",
+    "keywords": ["xray"],
+    "env": {
+        "PROTOCOL": {
+            "description": "choose vless or vmess",
+            "value": "vless"
+        },
+        "UUID": {
+            "description": "xray UUID",
+            "value": "6eb528ca-f387-46c0-b37a-b383927d55e8"        
+        }
+    },
+    "repository": "https://github.com/gh6rst/WQher2xy",
+    "stack": "container"
+}
