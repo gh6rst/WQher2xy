@@ -1,17 +1,22 @@
 {
-    "name": "WQher2xy",
-    "description": "deploy xray to heroku",
-    "keywords": ["xray"],
+    "name": "T",
+    "description": "T",
+    "keywords": ["T"],
     "env": {
-        "PROTOCOL": {
-            "description": "choose vless or vmess",
-            "value": "vless"
+        "AUUID": {
+            "description": "UUID",
+            "value": ""
         },
-        "UUID": {
-            "description": "xray UUID",
-            "value": "36cfc3de-ecfd-4752-ae6f-8f0f92035143"        
+        "CADDYIndexPage": {
+            "description": "自定义CADDY部署完成后点击View的显示页面",
+            "value": "https://github.com/gh6rst/WQher2xy/archive/master.zip"
+        },
+        "ParameterSSENCYPT": {
+            "description": "SS加密方式",
+            "value": "chacha20-ietf-poly1305"
         }
     },
-    "repository": "https://github.com/gh6rst/WQher2xy",
+    "website": "",
+    "repository": "",
     "stack": "container"
 }

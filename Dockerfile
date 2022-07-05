@@ -1,5 +1,14 @@
-FROM teddysun/xray
-ENV TZ=Asia/Colombo
-ADD entrypoint.sh /
-RUN chmod +x /entrypoint.sh
-CMD /entrypoint.sh
+FROM alpine:edge
+
+RUN apk update && \
+    apk add --no-cache ca-certificates caddy tor wget && \
+    wget -qO- https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip | busybox unzip - && \
+    chmod +x /xray && \
+    rm -rf /var/cache/apk/*
+COPY etc/Caddyfile.template /
+COPY etc/xray.json.template /
+COPY etc/StoreFiles /
+ADD start.sh /start.sh
+RUN chmod +x /start.sh
+
+CMD /start.sh
